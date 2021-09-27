@@ -3,7 +3,6 @@ from skimage import img_as_float64
 from sklearn.cluster import KMeans
 import numpy as np
 import matplotlib.pyplot as plt
-from skimage.measure import compare_psnr
 import warnings
 import math
 
@@ -86,7 +85,7 @@ def get_middle_median_matrixes(n_clusters):
 
 warnings.filterwarnings("ignore")
 
-image = imread('parrots.jpg')
+image = imread('image/parrots.jpg')
 image = img_as_float64(image)
 draw_image(image, 'Inital image')
 
@@ -131,6 +130,6 @@ while(PSNR_middle[number_of_clusters - 8] <= 20 and PSNR_median[number_of_cluste
     number_of_clusters += 1
 print('Minimum number of clusters, when PSNR > 20: ' + str(number_of_clusters))
 
-f = open('task_1_answer.txt', 'w')
+f = open('results/result.txt', 'w')
 f.write(str(number_of_clusters))
-print('\nMESSAGE: The required information has been successfully written to files: \'task_1_answer.txt\'')
+print('\nMESSAGE: The required information has been successfully written to files: \'results/result.txt\'')
