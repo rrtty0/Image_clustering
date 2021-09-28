@@ -33,7 +33,7 @@ To use this project you need:
 - _Open_ root-folder with this project at your local computer
 - _Run_ file [image_clustering.py](./image_clustering.py):
 ```
-        $ python classification_of_speech_recordings.py
+        $ python image_clustering.py
 ```
 
 <a id="anc3"></a>
